@@ -13,15 +13,6 @@ View wireframes on [Figma](https://www.figma.com/file/yOPbj6bTUa2hjAekXZub2u/Unt
 
 View ERD on [Figma](https://www.figma.com/file/QG1fuUXi2CMw4HKWa5D1ZB/Untitled?node-id=0%3A1)
 
-## React Components
-1. Navbar
-2. Footer
-3. Home
-4. About
-5. Poster Detail
-6. Film Detail
-7. Edit Poster/Edit Film
-8. Search screen
 
 ## MVP
 ### Back end
@@ -29,8 +20,14 @@ Endpoints for Full CRUD, User creation and login
 Authentication for users to create, edit, and delete
 
 ### Front end
-Interactive front end for users to view data
-Searchable results from database
+1. Navbar
+2. Footer
+3. Home - Basic information and a random poster
+4. About - Detailed information about the application and the API endpoints
+5. Poster Detail
+6. Film Detail
+7. Edit Poster/Edit Film - Authenticated users will be able to CRUD
+8. Search screen - Users can search by film name to find posters
 
 
 ## Post MVP
