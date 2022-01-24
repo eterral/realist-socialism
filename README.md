@@ -9,3 +9,17 @@ View wireframes on [Figma](https://www.figma.com/file/yOPbj6bTUa2hjAekXZub2u/Unt
 ## Entity Relationship Diagram
 
 View ERD on [Figma](https://www.figma.com/file/QG1fuUXi2CMw4HKWa5D1ZB/Untitled?node-id=0%3A1)
+
+## MVP
+### Back end
+Authentication for users to create, edit, and delete
+
+### Front end
+Interavtice front end for users to view data
+
+
+## Post MVP
+Associate posters to users so users can keep track of posters in their collection
+Create many-to-many relationhip for Artists and Posters
+
+
