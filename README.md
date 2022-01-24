@@ -31,7 +31,7 @@ View ERD on [Figma](https://www.figma.com/file/QG1fuUXi2CMw4HKWa5D1ZB/Untitled?n
 
 
 ## Post MVP
-Associate posters to users so users can keep track of posters in their collection
+Associate posters to users so users can keep track of posters in their collection<br>
 Create many-to-many relationhip for Artists and Posters
 
 
