@@ -28,7 +28,8 @@ View ERD on [Figma](https://www.figma.com/file/QG1fuUXi2CMw4HKWa5D1ZB/Untitled?n
 Authentication for users to create, edit, and delete
 
 ### Front end
-Interavtice front end for users to view data
+Interactive front end for users to view data
+Searchable results from database
 
 
 ## Post MVP
