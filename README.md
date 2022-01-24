@@ -16,7 +16,7 @@ View ERD on [Figma](https://www.figma.com/file/QG1fuUXi2CMw4HKWa5D1ZB/Untitled?n
 
 ## MVP
 ### Back end
-Endpoints for Full CRUD, User creation and login
+Endpoints for Full CRUD, User creation and login<br>
 Authentication for users to create, edit, and delete
 
 ### Front end
