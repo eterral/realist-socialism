@@ -19,6 +19,10 @@ load_dotenv()
 
 PRODUCTION = os.getenv('PRODUCTION')
 
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 if PRODUCTION:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
