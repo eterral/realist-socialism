@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'realistsocialism',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
