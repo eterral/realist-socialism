@@ -18,7 +18,7 @@ import psycopg2
 
 load_dotenv()
 
-IS_PRODUCTION = os.getenv('PRODUCTION') == True
+IS_PRODUCTION = os.getenv('PRODUCTION') == 'True'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 if IS_PRODUCTION:
