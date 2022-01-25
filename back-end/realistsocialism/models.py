@@ -12,7 +12,7 @@ class Film(models.Model):
 
 class Poster(models.Model):
     title = models.CharField(max_length=128)
-    year = models.IntegerField
+    year = models.IntegerField(default=1950)
     artist = models.CharField(max_length=128)
     film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='posters')
 

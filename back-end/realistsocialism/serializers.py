@@ -14,7 +14,7 @@ class PosterSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Poster
-		fields = ['title', 'year', 'artist']
+		fields = ['title', 'year', 'artist', 'film']
 
 class UserSerializer(serializers.ModelSerializer):
 	username = serializers.CharField(required=True, validators=[UniqueValidator(queryset=User.objects.all())])
