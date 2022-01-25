@@ -96,7 +96,7 @@ else:
             'NAME': 'rs_db',
             'USER': 'rsdb_admin',
             'PASSWORD': 'password',
-            'HOST': 'localhost'
+            'HOST': 'localhost',
         }
     }
 
