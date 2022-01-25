@@ -17,6 +17,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+PRODUCTION = os.getenv('PRODUCTION')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 if PRODUCTION:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
