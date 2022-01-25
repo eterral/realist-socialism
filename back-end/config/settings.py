@@ -18,10 +18,10 @@ import psycopg2
 
 load_dotenv()
 
-PRODUCTION = os.getenv('PRODUCTION')
+IS_PRODUCTION = os.getenv('PRODUCTION') == True
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-if PRODUCTION:
+if IS_PRODUCTION:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 else:
     BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-if PRODUCTION:
+if IS_PRODUCTION:
     DATABASES = {
         'default' : dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
@@ -134,7 +134,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-if PRODUCTION:
+if IS_PRODUCTION:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATIC_URL = '/static/'
     STATICFILES_DIRS = (
