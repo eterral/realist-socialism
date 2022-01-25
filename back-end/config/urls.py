@@ -29,5 +29,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/token/', TokenObtainPairView.as_view()),
     path('api/token/refresh', TokenRefreshView.as_view()),
-    path('create-user', UserCreate.as_view())
+    path('users/', include('realistsocialism.urls'))
 ]
