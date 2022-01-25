@@ -16,6 +16,7 @@ import dj_database_url
 from dotenv import load_dotenv
 import psycopg2
 
+
 load_dotenv()
 
 IS_PRODUCTION = os.getenv('PRODUCTION') == 'True'
@@ -151,3 +152,8 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}

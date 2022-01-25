@@ -11,6 +11,7 @@ gunicorn = "*"
 djangorestframework = "*"
 dj-database-url = "*"
 python-dotenv = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 

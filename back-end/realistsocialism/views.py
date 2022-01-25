@@ -1,10 +1,10 @@
 from rest_framework import viewsets, status, generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenitcatedOrReadOnly
 from django.contrib.auth.models import User
 from library.serializers import FilmSerializer, PosterSerializer, UserSerializer
-from library.models import Book, Author
+from library.models import Film, Poster
 
 
 # Create your views here.
@@ -12,12 +12,12 @@ from library.models import Book, Author
 class FilmViewSet(viewsets.ModelViewSet):
 	queryset = Film.objects.all()
 	serializer_class = FilmSerializer
-    permission_classes(AllowAny,)
+    permission_classes(IsAuthenitcatedOrReadOnly,)
 
 class PosterViewSet(viewsets.ModelViewSet):
 	queryset = Poster.objects.all()
 	serializer_class = PosterSerializer
-    permission_classes(AllowAny,)
+    permission_classes(IsAuthenitcatedOrReadOnly,)
 
 class UserCreate(generics.CreateAPIView):
 	queryset = User.objects.all()
