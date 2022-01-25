@@ -22,6 +22,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 router = routers.DefaultRouter()
 router.register('films', views.FilmViewSet)
 router.register('posters', views.PosterViewSet)
+router.register('create-user', views.UserCreateViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
