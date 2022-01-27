@@ -14,7 +14,7 @@ class PosterSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Poster
-		fields = ['title', 'year', 'artist', 'film']
+		fields = ['title', 'year', 'artist', 'film', 'image_url']
 
 class UserSerializer(serializers.ModelSerializer):
 	username = serializers.CharField(required=True, validators=[UniqueValidator(queryset=User.objects.all())])
@@ -34,7 +34,6 @@ class UserSerializer(serializers.ModelSerializer):
 	    user = User.objects.create(
 	        username=validated_data['username'],
 	    )
-
 	    user.set_password(validated_data['password'])
 	    user.save()
 	    return user

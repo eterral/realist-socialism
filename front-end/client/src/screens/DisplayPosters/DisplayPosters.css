@@ -1,0 +1,29 @@
+.image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    height: 800px;
+    border-style: solid;
+    border-width: 10px;
+    box-sizing: border-box;
+}
+
+.extra-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    height: 800px;
+    border-style: solid;
+    border-width: 10px;
+    box-sizing: border-box;
+}
+
+.search-results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

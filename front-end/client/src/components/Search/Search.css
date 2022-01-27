@@ -1,0 +1,26 @@
+.search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 300px;
+    border-style: solid;
+    border-width: 10px;
+    box-sizing: border-box;
+    gap: 10px
+}
+
+.searchbar{
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    width: 30vw;
+    font-size: 4vw;
+}
+.searchbar:focus{
+    outline: none;
+}
+.search-text{
+    font-size: 4vw;
+}

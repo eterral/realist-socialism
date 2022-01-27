@@ -1,0 +1,28 @@
+.home{
+    display: flex;
+    flex-direction: row;
+}
+.home-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 1000px;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.home-info-text{
+    color: rgb(255, 255, 255);
+    font-size: 4vw;
+}
+.random-poster{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 50vw;
+    border-style: solid;
+    border-width: 10px;
+}

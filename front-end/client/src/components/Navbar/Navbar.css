@@ -1,0 +1,52 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+.title{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 65vw;
+    border-style: solid;
+    border-width: 10px;
+    font-size: 4vw;
+}
+.signin{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 35vw;
+    background-color: rgb(0, 0, 0);
+}
+.signin-text{
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+}
+.films-nav{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 35vw;
+    background-color: rgb(0, 0, 0);
+}
+.films-nav-text{
+    color: rgb(255, 255, 255);
+    font-size: 7vw;
+}
+.posters-nav{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 65vw;
+    border-style: solid;
+    border-width: 10px;
+    font-size: 5vw;
+}

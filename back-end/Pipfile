@@ -12,6 +12,8 @@ djangorestframework = "*"
 dj-database-url = "*"
 python-dotenv = "*"
 djangorestframework-simplejwt = "*"
+pillow = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

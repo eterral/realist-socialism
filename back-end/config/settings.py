@@ -37,7 +37,9 @@ SECRET_KEY = 'django-insecure-ddl3-t8q!vh&ye&!y#28tm4=ygo9q51o%@t3(9pxp(sl*6+@jx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['realist-socialism.herokuapp.com', 'localhost']
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+
+ALLOWED_HOSTS = ['realist-socialism.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -51,10 +53,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'realistsocialism',
     'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -153,8 +157,8 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     )
+# }
