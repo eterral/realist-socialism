@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-ddl3-t8q!vh&ye&!y#28tm4=ygo9q51o%@t3(9pxp(sl*6+@jx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://unruffled-pike-ae83af.netlify.app"]
 
 ALLOWED_HOSTS = ['realist-socialism.herokuapp.com', '127.0.0.1', 'localhost']
 
