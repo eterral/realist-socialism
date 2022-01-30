@@ -11,7 +11,7 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
 		fields = ['title', 'title_en', 'nationality', 'description', 'posters', 'id']
 
 class PosterSerializer(serializers.HyperlinkedModelSerializer):
-    film = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
+    film = serializers.PrimaryKeyRelatedField(many=False, queryset=Film.objects.all())
     class Meta:
 	    model = Poster
 	    fields = ['title', 'year', 'artist', 'film', 'image_url', 'id']

@@ -28,7 +28,7 @@ export default function Home({user}) {
                 </div>
             </div><div className='create-home-container'>
                 <div className='create-home-film'>
-                    <p>Add Film</p>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to='/films/create/'><p>Add Film</p></Link>
                 </div>
                 <div className='create-home-poster'>
                     <Link style={{ textDecoration: 'none', color: 'black' }} to="/poster/create"><p>Add Poster</p></Link>

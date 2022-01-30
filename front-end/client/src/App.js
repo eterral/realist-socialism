@@ -11,6 +11,7 @@ import CreatePoster from "./screens/CreatePoster/CreatePoster";
 import DisplayFilms from "./screens/DisplayFilms/DisplayFilms";
 import DetailFilm from "./screens/DetailFilm/DetailFilm";
 import EditFilm from "./screens/EditFilm/EditFilm";
+import CreateFilm from "./screens/CreateFilm/CreateFilm";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,7 +36,7 @@ function App() {
         <Route path="/films" element={<DisplayFilms />} />
         <Route path="/films/detail/:id" element={<DetailFilm />} />
         <Route path="/film/edit/:id" element={<EditFilm />} />
-        <Route path="/films/create" />
+        <Route path="/films/create" element={<CreateFilm />} />
       </Routes>
     </div>
   );

@@ -54,3 +54,8 @@
     border-width: 10px;
     font-size: 4vw;
 }
+
+img{
+    max-width: 30vw;
+    max-height: 600px;
+}
