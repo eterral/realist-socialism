@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { getFilms } from '../../services/films';
 import Layout from '../../components/Layout/Layout';
 
-export default function DisplayFilms() {
+export default function DisplayFilms({user, setUser}) {
     const [films, setFilms] = useState([]);
     const [searchedFilms, setSearchedFilms] = useState([]);
 
@@ -28,7 +28,7 @@ export default function DisplayFilms() {
     const handleSubmit = (e) => e.preventDefault();
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
             <div>
                 <div className='search-container'>
                     <Search onSubmit={handleSubmit} handleSearch={handleSearch} />

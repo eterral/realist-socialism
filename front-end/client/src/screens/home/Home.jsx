@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { getPosters } from '../../services/posters';
 import { Link } from 'react-router-dom';
 
-export default function Home({user}) {
+export default function Home({user, setUser}) {
     const [posters, setPosters] = useState([]);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export default function Home({user}) {
     }, []);
 
     return (
-        <Layout user={user}>
+        <Layout user={user} setUser={setUser}>
             <div className='home'>
                 <div className='home-info'>
                     <p className='home-info-text'>Film in Central Eastern Europe was one of the only areas where  writers, musicians, and artists could publically dissent. Realist Socialism is a database of films and their posters from that era.</p>

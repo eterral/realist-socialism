@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { createPoster } from '../../services/posters';
 import { getFilms } from '../../services/films';
 
-export default function EditPoster() {
+export default function EditPoster({user, setUser}) {
     const [films, setFilms] = useState([])
     const [poster, setPoster] = useState({
         image_url: '',
@@ -42,7 +42,7 @@ export default function EditPoster() {
     }
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
                 <form>
                     <div className='create-container'>
                     <div className='create-image'>

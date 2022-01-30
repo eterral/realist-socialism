@@ -1,7 +1,11 @@
 import '../Navbar/Navbar.css'
 import { Link } from 'react-router-dom'
 
-export default function Navbar({user}) {
+export default function Navbar({user, setUser}) {
+    const logOut = () => {
+        localStorage.clear()
+        setUser(null)
+    }
     return (
     <div className='navbar'>
         <div className='title'>
@@ -9,7 +13,7 @@ export default function Navbar({user}) {
         </div>
         {user ?
             <div className='signin'>
-                <Link style={{ textDecoration: 'none', color: 'white' }} to="/users"><h1 className='signin-text'>Log Out</h1></Link>
+                <Link onClick={logOut} style={{ textDecoration: 'none', color: 'white' }} to="/users"><h1 className='signin-text'>Log Out</h1></Link>
             </div>
             :
             <div className='signin'>

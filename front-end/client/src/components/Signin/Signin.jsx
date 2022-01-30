@@ -9,8 +9,6 @@ export default function Signin({ setUser }) {
     const [form, setForm] = useState({
     username: "",
     password: "",
-    isError: false,
-    errorMsg: "",
     });
 
     const handleChange = (e) => {
@@ -22,18 +20,9 @@ export default function Signin({ setUser }) {
 
     const onSignIn = async (e) => {
         e.preventDefault();
-        try {
-            const user = await signIn(form);
-            setUser(user);
-            navigate("/");
-        }catch (error) {
-            setForm({
-                isError: true,
-                errorMsg: "Invalid Email or Password",
-                email: "",
-                password: "",
-            });
-        }
+        const user = await signIn(form);
+        setUser(user);
+        navigate("/");
     };
 
     const renderError = () => {

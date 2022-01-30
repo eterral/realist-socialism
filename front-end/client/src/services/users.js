@@ -4,10 +4,12 @@ import jwtDecode from "jwt-decode";
 export const signUp = async (credentials) => {
   try {
     const res = await api.post("/users/account-create/", credentials);
-    localStorage.setItem("token", res.data.token);
-    const user = jwtDecode(res.data.token);
+    localStorage.setItem("token", res.data.access);
+    localStorage.setItem("refresh", res.data.refresh);
+    const user = jwtDecode(res.data.access);
     return user;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
@@ -15,8 +17,9 @@ export const signUp = async (credentials) => {
 export const signIn = async (credentials) => {
   try {
     const res = await api.post("/users/token/", credentials);
-    localStorage.setItem("token", res.data.token);
-    const user = jwtDecode(res.data.token);
+    localStorage.setItem("token", res.data.access);
+    localStorage.setItem("refresh", res.data.refresh);
+    const user = jwtDecode(res.data.access);
     return user;
   } catch (error) {
     throw error;
@@ -24,10 +27,11 @@ export const signIn = async (credentials) => {
 };
 
 export const verifyUser = async () => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    const res = await api.get("/users/token/refresh/");
-    return res.data;
+  const refresh = localStorage.getItem("refresh");
+  if (refresh) {
+    const res = await api.post("users/token/refresh-token/", { refresh });
+    localStorage.setItem("token", res.data.access);
+    return res;
   }
   return false;
 };

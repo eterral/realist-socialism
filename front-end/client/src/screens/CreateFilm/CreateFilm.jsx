@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createFilm } from '../../services/films';
 
-export default function CreatFilm() {
+export default function CreatFilm({user, setUser}) {
     const [film, setFilm] = useState({
         title: '',
         title_en: '',
@@ -30,7 +30,7 @@ export default function CreatFilm() {
     }
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
                 <form>
                     <div className='edit-film-container'>
                         <div className='edit-film-title'>

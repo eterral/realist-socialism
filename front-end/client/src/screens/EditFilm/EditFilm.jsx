@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getFilm, updateFilm, deleteFilm } from '../../services/films';
 
-export default function EditPoster() {
+export default function EditPoster({user, setUser}) {
     const [film, setFilm] = useState({
         title: '',
         title_en: '',
@@ -45,7 +45,7 @@ export default function EditPoster() {
     }
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
                 <form>
                     <div className='edit-film-container'>
                         <div className='edit-film-title'>

@@ -10,8 +10,6 @@ export default function Signup({setUser}) {
         username: "",
         password: "",
         password2: "",
-        isError: false,
-        errorMsg: "",
     });
 
     const handleChange = (e) => {
@@ -23,19 +21,9 @@ export default function Signup({setUser}) {
 
     const onSignUp = async (e) => {
         e.preventDefault();
-        try {
             const user = await signUp(form);
             setUser(user);
             navigate("/");
-        } catch (error) {
-            setForm({
-                isError: true,
-                errorMsg: error,
-                password2: "",
-                passsword: "",
-                username: "",
-            });
-        }
     };
 
     const renderError = () => {

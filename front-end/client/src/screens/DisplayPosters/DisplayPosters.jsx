@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { getPosters } from '../../services/posters';
 import Layout from '../../components/Layout/Layout';
 
-export default function DisplayPosters() {
+export default function DisplayPosters({user, setUser}) {
     const [posters, setPosters] = useState([]);
     const [searchedPosters, setSearchedPosters] = useState([]);
 
@@ -28,7 +28,7 @@ export default function DisplayPosters() {
     const handleSubmit = (e) => e.preventDefault();
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
             <div>
                 <div className='search-container'>
                     <Search onSubmit={handleSubmit} handleSearch={handleSearch} />

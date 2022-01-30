@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { getPosters } from "../../services/posters";
 import { getFilm } from "../../services/films";
 
-export default function DetailPosters() {
+export default function DetailPosters({user, setUser}) {
     const [poster, setPoster] = useState([]);
     const [film, setFilm] = useState([]);
 
@@ -24,7 +24,7 @@ export default function DetailPosters() {
     }, [params.id]);
 
     return (
-        <Layout>
+        <Layout user={user} setUser={setUser}>
             <div className="detail-film-container">
                 <div className="detail-film-title">
                     <div className='film-title'>
