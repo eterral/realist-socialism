@@ -2,6 +2,7 @@ import '../home/Home.css'
 import Layout from '../../components/Layout/Layout';
 import { useEffect, useState } from 'react';
 import { getPosters } from '../../services/posters';
+import { Link } from 'react-router-dom';
 
 export default function Home({user}) {
     const [posters, setPosters] = useState([]);
@@ -24,6 +25,13 @@ export default function Home({user}) {
                 </div>
                 <div className='random-poster'>
                     <img src={posters.image_url} />
+                </div>
+            </div><div className='create-home-container'>
+                <div className='create-home-film'>
+                    <p>Add Film</p>
+                </div>
+                <div className='create-home-poster'>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to="/poster/create"><p>Add Poster</p></Link>
                 </div>
             </div>
         </Layout>

@@ -8,13 +8,13 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
 	posters = serializers.StringRelatedField(many=True)
 	class Meta:
 		model = Film
-		fields = ['title', 'title_en', 'nationality', 'description', 'posters']
+		fields = ['title', 'title_en', 'nationality', 'description', 'posters', 'id']
 
 class PosterSerializer(serializers.HyperlinkedModelSerializer):
-
-	class Meta:
-		model = Poster
-		fields = ['title', 'year', 'artist', 'film', 'image_url']
+    film = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
+    class Meta:
+	    model = Poster
+	    fields = ['title', 'year', 'artist', 'film', 'image_url', 'id']
 
 class UserSerializer(serializers.ModelSerializer):
 	username = serializers.CharField(required=True, validators=[UniqueValidator(queryset=User.objects.all())])

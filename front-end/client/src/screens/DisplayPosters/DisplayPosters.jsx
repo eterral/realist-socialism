@@ -1,6 +1,7 @@
 import '../DisplayPosters/DisplayPosters.css'
 import Search from '../../components/Search/Search';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getPosters } from '../../services/posters';
 import Layout from '../../components/Layout/Layout';
 
@@ -36,7 +37,7 @@ export default function DisplayPosters() {
                     {searchedPosters.map((poster) => {
                         return(
                             <div className='image-container'>
-                                <img src={poster.image_url} />
+                                <Link to={`detail/${poster.id}`}><img src={poster.image_url} /></Link>
                             </div>
                         );
                     })}

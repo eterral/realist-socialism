@@ -1,0 +1,94 @@
+.edit-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-image{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 50vw;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.edit-title{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.edit-info-box{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 700px;
+    width: 50vw;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.edit-input{
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    width: 30vw;
+    font-size: 4vw;
+}
+.edit-input:focus{
+    outline: none;
+}
+
+.edit-input-black{
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    width: 30vw;
+    font-size: 4vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.edit-input-black:focus{
+    outline: none;
+}
+
+.edit-selector{
+    background-color: black;
+    border-color: transparent;
+    color: white;
+    font-size: 4vw;
+}
+
+.edit-selector:focus{
+    outline: none;
+}
+
+.edit-bottom{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.edit-button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    font-size: 4vw;
+}

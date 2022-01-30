@@ -4,6 +4,13 @@ import { verifyUser } from "./services/users";
 import { Routes, Route } from "react-router-dom";
 import Home from "./screens/home/Home";
 import DisplayPosters from "./screens/DisplayPosters/DisplayPosters";
+import Users from "./screens/Users/Users";
+import DetailPosters from "./screens/DetailPosters/DetailPosters";
+import EditPoster from "./screens/EditPoster/EditPoster";
+import CreatePoster from "./screens/CreatePoster/CreatePoster";
+import DisplayFilms from "./screens/DisplayFilms/DisplayFilms";
+import DetailFilm from "./screens/DetailFilm/DetailFilm";
+import EditFilm from "./screens/EditFilm/EditFilm";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,6 +28,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route path="/posters" element={<DisplayPosters user={user} />} />
+        <Route path="/users" element={<Users setUser={setUser} />} />
+        <Route path="/posters/detail/:id" element={<DetailPosters />} />
+        <Route path="/poster/edit/:id" element={<EditPoster />} />
+        <Route path="/poster/create" element={<CreatePoster />} />
+        <Route path="/films" element={<DisplayFilms />} />
+        <Route path="/films/detail/:id" element={<DetailFilm />} />
+        <Route path="/film/edit/:id" element={<EditFilm />} />
+        <Route path="/films/create" />
       </Routes>
     </div>
   );

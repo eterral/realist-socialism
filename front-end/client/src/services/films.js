@@ -9,6 +9,15 @@ export const getFilms = async () => {
   }
 };
 
+export const getFilm = async (id) => {
+  try {
+    const res = await api.get(`/films/${id}`);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const createFilm = async (film) => {
   try {
     const res = await api.post("/films", film);

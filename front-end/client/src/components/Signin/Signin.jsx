@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import "./SignIn.css";
+import "../Signin/Signin.css";
+import { useState } from "react";
+import { signIn } from "../../services/users";
 
-export default function SignIn({ setUser }) {
+export default function Signin({ setUser }) {
     const navigate = useNavigate();
 
     const [form, setForm] = useState({
@@ -48,25 +50,26 @@ export default function SignIn({ setUser }) {
 
     return (
         <div>
-            <form className="signin_form" onSubmit={(e) => onSignIn(e)}>
-            <p>Username</p>
+            <form className="signin-form" onSubmit={(e) => onSignIn(e)}>
+            <p>Login</p>
             <br />
             <input
-                className="signin_input"
+                className="signin-input"
                 required
                 type="text"
                 name="username"
+                placeholder="Username"
                 value={form.username}
                 onChange={handleChange}
             />
             <br />
-            <p>Password</p>
             <br />
             <input
-                className="signin_input"
+                className="signin-input"
                 required
                 type="password"
                 name="password"
+                placeholder="Password"
                 value={form.password}
                 onChange={handleChange}
             />

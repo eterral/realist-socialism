@@ -9,9 +9,18 @@ export const getPosters = async () => {
   }
 };
 
+export const getPoster = async (id) => {
+  try {
+    const res = await api.get(`/posters/${id}`);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const createPoster = async (poster) => {
   try {
-    const res = await api.post("/posters", poster);
+    const res = await api.post("/posters/", poster);
     return res.data;
   } catch (error) {
     throw error;
@@ -20,7 +29,7 @@ export const createPoster = async (poster) => {
 
 export const updatePoster = async (id, poster) => {
   try {
-    const res = await api.put(`/posters/${id}`, poster);
+    const res = await api.put(`/posters/${id}/`, poster);
     return res.data;
   } catch (error) {
     throw error;
@@ -29,7 +38,7 @@ export const updatePoster = async (id, poster) => {
 
 export const deletePoster = async (id) => {
   try {
-    const res = await api.delete(`/posters/${id}`);
+    const res = await api.delete(`/posters/${id}/`);
     return res.data;
   } catch (error) {
     throw error;
