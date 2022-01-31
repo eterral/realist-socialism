@@ -50,3 +50,12 @@
     border-width: 10px;
     font-size: 5vw;
 }
+
+@media only screen and (max-width: 600px){
+    .title{
+        width: 100vw;
+    }
+    .signin{
+        width: 100vw;
+    }
+}
