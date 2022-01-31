@@ -1,0 +1,18 @@
+.layoout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav"
+    "body body body"
+    "foot foot foot";
+}
+.nav{
+    grid-area: nav;
+}
+.layout-children{
+    grid-area: body;
+}
+.foot{
+    grid-area: foot;
+}
