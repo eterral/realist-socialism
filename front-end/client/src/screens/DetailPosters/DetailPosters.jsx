@@ -39,7 +39,9 @@ export default function DetailPosters({user, setUser}) {
                 </div>
             </div>
             <div className="detail-edit">
-                <Link style={{ textDecoration: 'none' }} to={`/poster/edit/${poster.id}`}><a className='detail-text-black'>Edit</a> </Link>
+                {user ? 
+                <Link style={{ textDecoration: 'none' }} to={`/poster/edit/${poster.id}`}><a className='detail-text-black'>Edit</a> </Link> :
+                <Link style={{ textDecoration: 'none' }} to={`/users/`}><p className='detail-text-black'>Login to Edit</p></Link>}
             </div>
         </Layout>
     )

@@ -52,7 +52,7 @@ export default function DetailPosters({user, setUser}) {
                     })}
                     {poster.length % 2 == 1 ? 
                     <div className='extra-div'>
-                        <p>Add a Poster</p>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/films/create/'><p className='film-title'>Add a Poster</p></Link>
                     </div> :
                     <div>
 
@@ -60,7 +60,9 @@ export default function DetailPosters({user, setUser}) {
                 </div>
             </div>
             <div className="detail-edit">
-                <Link style={{ textDecoration: 'none' }} to={`/film/edit/${film.id}`}><p className='detail-text-black'>Edit</p> </Link>
+                {user ?
+                <Link style={{ textDecoration: 'none' }} to={`/film/edit/${film.id}`}><p className='detail-text-black'>Edit</p> </Link> :
+                <Link style={{ textDecoration: 'none' }} to={`/users/`}><p className='detail-text-black'>Login to Edit</p></Link>}
             </div>
         </Layout>
     )
