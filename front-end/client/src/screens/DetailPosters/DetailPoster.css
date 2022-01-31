@@ -58,3 +58,20 @@
     text-decoration: none;
     font-size: 4vw;
 }
+
+@media only screen and (max-width: 600px){
+    .detail-container{
+        flex-direction: column;
+    }
+    .detail-img{
+        width: 100vw;
+        height: 400px;
+    }
+
+    .detail-title{
+        width: 100vw;
+    }
+    .detail-info{
+        width: 100vw;
+    }
+}
