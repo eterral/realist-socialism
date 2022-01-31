@@ -40,6 +40,7 @@ export default function EditPoster({user, setUser}) {
 
     const handleDelete = async (e) => {
         e.preventDefault()
+        console.log(localStorage.getItem("token"));
         await deleteFilm(params.id)
         navigate(`/films/`)
     }

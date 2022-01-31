@@ -39,6 +39,7 @@ export const updateFilm = async (id, film) => {
 export const deleteFilm = async (id) => {
   try {
     const res = await api.delete(`/films/${id}/`);
+    console.log(localStorage.getItem("token"));
     return res.data;
   } catch (error) {
     throw error;

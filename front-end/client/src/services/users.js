@@ -1,5 +1,6 @@
 import api from "./apiConfig";
 import jwtDecode from "jwt-decode";
+import axios from "axios";
 
 export const signUp = async (credentials) => {
   try {
@@ -29,7 +30,12 @@ export const signIn = async (credentials) => {
 export const verifyUser = async () => {
   const refresh = localStorage.getItem("refresh");
   if (refresh) {
-    const res = await api.post("users/token/refresh-token/", { refresh });
+    const res = await axios.post(
+      "https://realist-socialism.herokuapp.com/users/token/refresh/",
+      {
+        refresh,
+      }
+    );
     localStorage.setItem("token", res.data.access);
     return res;
   }

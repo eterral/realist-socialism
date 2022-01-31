@@ -27,16 +27,43 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home user={user} />} />
-        <Route path="/posters" element={<DisplayPosters user={user} />} />
-        <Route path="/users" element={<Users setUser={setUser} />} />
-        <Route path="/posters/detail/:id" element={<DetailPosters />} />
-        <Route path="/poster/edit/:id" element={<EditPoster />} />
-        <Route path="/poster/create" element={<CreatePoster />} />
-        <Route path="/films" element={<DisplayFilms />} />
-        <Route path="/films/detail/:id" element={<DetailFilm />} />
-        <Route path="/film/edit/:id" element={<EditFilm />} />
-        <Route path="/films/create" element={<CreateFilm />} />
+        <Route path="/" element={<Home user={user} setUser={setUser} />} />
+        <Route
+          path="/posters"
+          element={<DisplayPosters user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/users"
+          element={<Users user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/posters/detail/:id"
+          element={<DetailPosters user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/poster/edit/:id"
+          element={<EditPoster user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/poster/create"
+          element={<CreatePoster user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/films"
+          element={<DisplayFilms user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/films/detail/:id"
+          element={<DetailFilm user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/film/edit/:id"
+          element={<EditFilm user={user} setUser={setUser} />}
+        />
+        <Route
+          path="/films/create"
+          element={<CreateFilm user={user} setUser={setUser} />}
+        />
       </Routes>
     </div>
   );

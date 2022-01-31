@@ -22,7 +22,7 @@ export default function DetailPosters({user, setUser}) {
     }, [params.id]);
 
     return (
-        <Layout user={user} setUser={setUser}x>
+        <Layout user={user} setUser={setUser}>
             <div className="detail-container">
                 <div className="detail-img">
                     <img src={poster.image_url} />
