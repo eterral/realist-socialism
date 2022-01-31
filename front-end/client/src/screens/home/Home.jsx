@@ -10,7 +10,7 @@ export default function Home({user, setUser}) {
     useEffect(() => {
         const grabPosters = async () => {
         const res = await getPosters();
-        setPosters(res[Math.floor(Math.random() * (res.length - 1))])
+        setPosters(res[Math.floor(Math.random() * (res.length))])
     };
     grabPosters();
     }, []);
