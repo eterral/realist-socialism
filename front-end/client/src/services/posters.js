@@ -2,7 +2,7 @@ import api from "./apiConfig";
 
 export const getPosters = async () => {
   try {
-    const res = await api.get("/posters");
+    const res = await api.get("/posters/");
     return res.data;
   } catch (error) {
     throw error;

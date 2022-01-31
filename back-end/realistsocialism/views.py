@@ -13,15 +13,18 @@ class FilmViewSet(viewsets.ModelViewSet):
     queryset = Film.objects.all()
     serializer_class = FilmSerializer
     # permission_classes = (AllowAny,)
+    authentication_classes = []
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class PosterViewSet(viewsets.ModelViewSet):
     queryset = Poster.objects.all()
     serializer_class = PosterSerializer
     # permission_classes = (AllowAny,)
+    authentication_classes = []
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class UserCreate(generics.CreateAPIView):
-	queryset = User.objects.all()
-	serializer_class = UserSerializer
-	permission_classes = (AllowAny,)
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    authentication_classes = []
+    permission_classes = (AllowAny,)
