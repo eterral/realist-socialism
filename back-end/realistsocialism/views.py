@@ -12,14 +12,14 @@ from .models import Film, Poster
 class FilmViewSet(viewsets.ModelViewSet):
     queryset = Film.objects.all()
     serializer_class = FilmSerializer
-    # authentication_classes = []
-    permission_classes = (BasePermission,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    
 
 class PosterViewSet(viewsets.ModelViewSet):
     queryset = Poster.objects.all()
     serializer_class = PosterSerializer
-    # authentication_classes = []
-    permission_classes = (BasePermission,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    
 
 class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()

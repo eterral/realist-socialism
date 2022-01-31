@@ -14,6 +14,7 @@ python-dotenv = "*"
 djangorestframework-simplejwt = "*"
 pillow = "*"
 django-cors-headers = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 

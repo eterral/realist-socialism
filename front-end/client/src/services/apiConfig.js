@@ -15,7 +15,9 @@ const getToken = () => {
 
 api.interceptors.request.use(
   async function (config) {
-    config.headers[`Authorization`] = await getToken();
+    if (localStorage.getItem("token")) {
+      config.headers[`Authorization`] = await getToken();
+    }
     return config;
   },
   function (error) {

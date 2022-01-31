@@ -30,12 +30,9 @@ export const signIn = async (credentials) => {
 export const verifyUser = async () => {
   const refresh = localStorage.getItem("refresh");
   if (refresh) {
-    const res = await axios.post(
-      "https://realist-socialism.herokuapp.com/users/token/refresh/",
-      {
-        refresh,
-      }
-    );
+    const res = await axios.post("http://127.0.0.1:8000/users/token/refresh/", {
+      refresh,
+    });
     localStorage.setItem("token", res.data.access);
     return res;
   }
