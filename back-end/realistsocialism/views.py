@@ -18,7 +18,7 @@ class FilmViewSet(viewsets.ModelViewSet):
 class PosterViewSet(viewsets.ModelViewSet):
     queryset = Poster.objects.all()
     serializer_class = PosterSerializer
-    permission_classes = (AllowANy,)
+    permission_classes = (AllowAny,)
     
 
 class UserCreate(generics.CreateAPIView):
