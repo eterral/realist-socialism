@@ -16,7 +16,6 @@ export default function DetailPosters({user, setUser}) {
         const resposter = await getPosters();
         const resfilm = await getFilm(params.id)
         const postersort = resposter.filter(poster => {return poster.title === resfilm.title})
-        console.log(resposter);
         setPoster(postersort);
         setFilm(resfilm)
         };

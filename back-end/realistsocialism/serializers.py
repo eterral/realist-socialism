@@ -3,6 +3,8 @@ from .models import Film, Poster
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
+from rest_framework_simplejwt.tokens import RefreshToken
+
 
 class FilmSerializer(serializers.HyperlinkedModelSerializer):
 	posters = serializers.StringRelatedField(many=True)
@@ -37,3 +39,11 @@ class UserSerializer(serializers.ModelSerializer):
 	    user.set_password(validated_data['password'])
 	    user.save()
 	    return user
+	
+	# def get_tokens_for_user(user):
+	# 	refresh = RefreshToken.for_user(user)
+
+	# 	return {
+	# 		'refresh': str(refresh),
+	# 		'access': str(refresh.access_token),
+	# 	}

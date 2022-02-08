@@ -11,7 +11,7 @@
     width: 65vw;
     border-style: solid;
     border-width: 10px;
-    font-size: 4vw;
+    font-size: 3.7vw;
 }
 .signin{
     box-sizing: border-box;
@@ -24,7 +24,7 @@
 }
 .signin-text{
     color: rgb(255, 255, 255);
-    font-size: 5vw;
+    font-size: 3.7vw;
 }
 .films-nav{
     box-sizing: border-box;
@@ -37,7 +37,7 @@
 }
 .films-nav-text{
     color: rgb(255, 255, 255);
-    font-size: 7vw;
+    font-size: 3.7vw;
 }
 .posters-nav{
     box-sizing: border-box;
@@ -48,7 +48,7 @@
     width: 65vw;
     border-style: solid;
     border-width: 10px;
-    font-size: 5vw;
+    font-size: 3.7vw;
 }
 
 @media only screen and (max-width: 600px){
