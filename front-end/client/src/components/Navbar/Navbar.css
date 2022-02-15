@@ -1,6 +1,15 @@
 .navbar{
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.nav-top{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bottom{
+    display: flex;
     flex-direction: row;
 }
 .title{
